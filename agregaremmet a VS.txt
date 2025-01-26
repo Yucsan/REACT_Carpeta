@@ -1,0 +1,47 @@
+
+
+
+Abre la configuración de VS Code:
+
+Puedes acceder desde el menú principal: File > Preferences > Settings (o con Ctrl + ,).
+Edita el archivo de configuración JSON:
+
+Haz clic en el ícono con un documento (o busca "Edit in settings.json").
+
+
+
+
+Cómo agregar la configuración de Emmet en este archivo?
+Abre tu archivo settings.json (el que has mostrado).
+Añade lo siguiente sin borrar lo que ya tienes. Solo incluye estas líneas dentro del archivo, asegurándote de que la coma final de cada bloque sea correcta para mantener el formato JSON:
+json
+Copiar
+Editar
+"emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "javascriptreact": "html"
+},
+Por ejemplo, el archivo completo quedaría así:
+
+json
+Copiar
+Editar
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "security.workspace.trust.untrustedFiles": "open",
+    "xml.server.vmargs": "-Xmx128M",
+    "redhat.telemetry.enabled": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "json.schemas": [],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "javascriptreact": "html"
+    }
+}
+Detalles importantes
+Formato del JSON: Es fundamental que no se rompa el formato. Asegúrate de:
+Poner comas solo entre elementos, no después del último elemento.
+Usar las llaves {} correctamente.
+Si algo falla, Visual Studio Code te mostrará un error en el archivo settings.json y te dirá dónde corregirlo.
