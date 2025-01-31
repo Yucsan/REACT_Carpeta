@@ -19,10 +19,7 @@ export default class Juego extends Component {
       .map((resultado, index) => (resultado === max ? index : null))
       .filter((index) => index !== null);
 
-    const ganador =
-      indicesGanadores.length > 1
-        ? "Empate"
-        : jugadores[indicesGanadores[0]];
+    const ganador = indicesGanadores.length > 1 ? "Empate": jugadores[indicesGanadores[0]];
 
     this.setState({ resultados, ganador });
   };
