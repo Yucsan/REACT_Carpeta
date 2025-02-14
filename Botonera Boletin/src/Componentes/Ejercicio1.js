@@ -4,25 +4,28 @@ import React, { Component } from 'react';
 class Ejercicio1 extends Component {
     constructor(props) {
         super(props);
+
+          // sin usar state 
+          this.num1 = React.createRef();
+          this.num2 = React.createRef();
     }
     state = {
         resultadoSuma: 0
     }
+
+    realizarSuma = () => {
+        const num1 = parseFloat(this.num1.current.value)
+        const num2 = parseFloat(this.num2.current.value)
+    
+        const suma = num1+num2
+        this.setState({resultadoSuma: suma})
+    }
+
     render() {
 
         const { cambiaEj } = this.props;
 
-        // sin usar state 
-        const num1 = React.createRef();
-        const num2 = React.createRef();
-
-        const realizarSuma = () => {
-            const num1 = parseFloat(this.num1.current.value)
-            const num2 = parseFloat(this.num2.current.value)
-        
-            const suma = num1+num2
-            this.state.resultadoSuma = suma 
-        }
+    
 
         return (
             <div>
