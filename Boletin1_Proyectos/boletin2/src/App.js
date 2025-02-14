@@ -37,7 +37,6 @@ class App extends Component {
    
         <h2>{this.state.dia}</h2>
 
-
         </header>
       </div>
      );

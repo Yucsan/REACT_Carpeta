@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-
 export default class Ejercicio1 extends Component {
   state = {
     resultado: 0,
@@ -15,7 +14,6 @@ export default class Ejercicio1 extends Component {
       [id]: Number(value) // los input devuelven cadenas
     });
   };
-
 
   suma = () => {
     var { numerito1, numerito2 } = this.state;

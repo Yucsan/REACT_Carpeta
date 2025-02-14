@@ -5,21 +5,16 @@ class App extends Component {
   constructor(props) {
     super(props);
   }
-  state = { 
+  state = {
     num1: 0
-   }
-  render() { 
-    return ( 
+  }
+  render() {
+    return (
       <div>
         <h1>Prueba de Componentes</h1>
-
       </div>
-
-     );
-  
-}
- 
-
+    );
+  }
 }
 
 export default App;
